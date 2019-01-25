@@ -1,0 +1,54 @@
+.people-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.people-item {
+    text-align: center;
+    margin: 5px;
+}
+
+.people-item .avatar img {
+    width: 150px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.people-item .name {
+    text-transform: capitalize;
+}
+
+.border-off {
+    border: none!important;
+}
+
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.page-item {
+    margin: 2px 5px;
+}
+
+.page-item a, .page-item .divider, .page-item .first {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.page-item a:hover {
+    cursor: pointer;
+}
