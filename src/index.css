@@ -24,6 +24,13 @@
     border: none!important;
 }
 
+.margin-left-off {
+    margin-left: 0 !important;
+}
+
+.margin-right-off {
+    margin-right: 0 !important;
+}
 
 .margin-bottom-20 {
     margin-bottom: 20px;
@@ -51,4 +58,27 @@
 
 .page-item a:hover {
     cursor: pointer;
+}
+
+.header-row {
+    justify-content: flex-end;
+    margin: 10px 0 30px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.menu {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu .menu-items {
+    padding: 10px;
+}
+
+.footer {
+    justify-content: center;
+    margin: 50px 0 30px 0;
+    border-top: 1px solid #e8e8e8;
+    padding: 10px;
 }

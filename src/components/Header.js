@@ -3,16 +3,16 @@ import React, { Component } from 'react';
 class Header extends Component {
 	render() {
 		return(
-			<div className={"row"}>
+			<div className={"row header-row margin-left-off margin-right-off"}>
 				<div className={"menu"}>
 					<div className={"menu-items"}>
-						<span>Home</span>
+						<a href={'/man'} onClick={console.log('Man')}>Man</a>
 					</div>
 					<div className={"menu-items"}>
-						<span>Home</span>
+						<a href={'/female'} onClick={console.log('Female')}>Female</a>
 					</div>
 					<div className={"menu-items"}>
-						<span>Home</span>
+						<a href={'/'} onClick={console.log('Random')}>Random</a>
 					</div>
 				</div>
 			</div>

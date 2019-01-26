@@ -3,7 +3,7 @@ import React from 'react';
 function PeopleItems(props) {
 	return(
 		props.items.map(item =>
-			<div id={item.login.uid} className={"people-item card border-off"}>
+			<div key={item.login.uid} className={"people-item card border-off"}>
 				<div className={"avatar card-img-top"}>
 					<img src={item.picture.large} />
 				</div>

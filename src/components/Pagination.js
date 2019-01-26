@@ -6,10 +6,13 @@ class Pagination extends Component {
 		super();
 		
 		this.state = {
-			pages: [2, 3, 4, 5, 6]
+			pages: Array.apply(null, {length: 5}).map(Number.call, Number).map(item => {
+				return item+1;
+			})
 		};
 		
 		this.pageClicked = this.pageClicked.bind(this);
+		this.prevClicked = this.prevClicked.bind(this);
 	}
 	
 	pageClicked(event) {
@@ -27,18 +30,27 @@ class Pagination extends Component {
 		this.props.pageChanged(clickedLinkText)
 	}
 	
+	prevClicked() {
+		this.setState(prevState => {
+			return {
+				pages: prevState.pages.map(item => {
+					return item-1;
+				})
+			}
+		})
+	}
+	
 	render() {
 		return(
 			<div className={"pagination jcc margin-top-20 margin-bottom-20"}>
 				<div className={"page-item first"}>
-					<a onClick={this.pageClicked}>1</a>
+					<a onClick={this.prevClicked}>Prev</a>
 				</div>
-				<div className={"page-item divider"}>...</div>
 				<div className={"page-item pages"}>
 					
 						{this.state.pages.map(item => {
 							return (
-								<a onClick={this.pageClicked}>
+								<a key={item.id} onClick={this.pageClicked}>
 									{item}
 								</a>
 							)
