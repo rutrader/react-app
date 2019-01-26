@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
 	render() {
@@ -6,13 +7,13 @@ class Header extends Component {
 			<div className={"row header-row margin-left-off margin-right-off"}>
 				<div className={"menu"}>
 					<div className={"menu-items"}>
-						<a href={'/man'} onClick={console.log('Man')}>Man</a>
+						<Link to={`/man`}>Man</Link>
 					</div>
 					<div className={"menu-items"}>
-						<a href={'/female'} onClick={console.log('Female')}>Female</a>
+						<Link to={`/female`}>Female</Link>
 					</div>
 					<div className={"menu-items"}>
-						<a href={'/'} onClick={console.log('Random')}>Random</a>
+						<Link to={`/`}>Random</Link>
 					</div>
 				</div>
 			</div>

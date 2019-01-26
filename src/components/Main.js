@@ -10,8 +10,10 @@ library.add(faSpinner);
 
 class Main extends Component {
 	
-	constructor() {
+	constructor(props) {
 		super();
+		
+		console.log(props.match.params.type);
 		
 		this.state = {
 			isLoading: true,
@@ -22,9 +24,8 @@ class Main extends Component {
 		this.pageChanged = this.pageChanged.bind(this)
 	}
 	
-	
-	componentDidMount() {
-		fetch('https://randomuser.me/api/?results=10&page='+this.state.page)
+	fetchData(page = 0) {
+		fetch('https://randomuser.me/api/?results=10&page='+page)
 			.then(response => response.json())
 			.then(data => {
 				this.setState({peoples: data.results});
@@ -32,8 +33,12 @@ class Main extends Component {
 			});
 	}
 	
+	componentDidMount() {
+		this.fetchData();
+	}
+	
 	pageChanged(page) {
-		this.setState({page: page+1});
+		this.fetchData(page);
 	}
 	
 	render() {

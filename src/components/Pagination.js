@@ -8,8 +8,10 @@ class Pagination extends Component {
 		this.state = {
 			pages: Array.apply(null, {length: 5}).map(Number.call, Number).map(item => {
 				return item+1;
-			})
+			}),
+			page: 1
 		};
+		
 		
 		this.pageClicked = this.pageClicked.bind(this);
 		this.prevClicked = this.prevClicked.bind(this);
@@ -18,6 +20,8 @@ class Pagination extends Component {
 	pageClicked(event) {
 		
 		let clickedLinkText = parseInt(event.target.text);
+		
+		this.setState({page: clickedLinkText});
 		
 		this.setState(prevState => {
 			return {
@@ -30,12 +34,16 @@ class Pagination extends Component {
 		this.props.pageChanged(clickedLinkText)
 	}
 	
-	prevClicked() {
+	prevClicked(event) {
+		const { text } = event.target;
+
+		this.state.page > 1 &&
 		this.setState(prevState => {
 			return {
 				pages: prevState.pages.map(item => {
 					return item-1;
-				})
+				}),
+				page: this.state.page-1
 			}
 		})
 	}
@@ -48,13 +56,13 @@ class Pagination extends Component {
 				</div>
 				<div className={"page-item pages"}>
 					
-						{this.state.pages.map(item => {
+						{this.state.pages.map(function(item, key) {
 							return (
-								<a key={item.id} onClick={this.pageClicked}>
+								<a key={key} onClick={this.pageClicked}>
 									{item}
 								</a>
 							)
-						})}
+						}, this)}
 					
 				</div>
 			</div>
