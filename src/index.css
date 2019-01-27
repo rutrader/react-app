@@ -54,6 +54,7 @@
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
+    margin: 0 10px;
 }
 
 .page-item a:hover {
@@ -61,13 +62,13 @@
 }
 
 .header-row {
-    justify-content: flex-end;
+    justify-content: center;
     margin: 10px 0 30px 0;
     border-bottom: 1px solid #e8e8e8;
 }
 
 .menu {
-    width: 25%;
+    /*width: 25%;*/
     display: flex;
     justify-content: space-between;
 }

@@ -1,5 +1,6 @@
 {
-  "name": "demo",
+  "name": "react-app-demo",
+  "homepage": "https://rutrader.gitub.io/react-app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,6 +9,7 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "bootstrap": "^4.2.1",
     "cross-env": "^5.2.0",
+    "gh-pages": "^2.0.1",
     "i": "^0.3.6",
     "masonry-layout": "^4.2.2",
     "npm": "^6.7.0",
@@ -23,10 +25,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "stop": "react-scripts stop",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

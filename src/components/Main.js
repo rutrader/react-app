@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSpinner } from '@fortawesome/free-solid-svg-icons'
-import Pagination from "./Pagination";
 import UsersComponent from "./Users/UsersComponent";
+import PaginationComponent from "./Pagination/PaginationComponent";
 
-library.add(faSpinner);
 
 class Main extends Component {
 	
-	constructor(props) {
+	constructor() {
 		super();
 		
 		this.state = {
@@ -19,20 +15,21 @@ class Main extends Component {
 			page: 1,
 		};
 		
+		this.handleClick = this.handleClick.bind(this);
+		
 	}
 
+	handleClick(page) {
+		this.setState({page: page});
+	}
+	
 	render() {
 		return(
 			<div className={"margin-top-20 margin-bottom-20"}>
 				<div className={"people-items margin-top-20 margin-bottom-20"}>
-					<UsersComponent type={this.props.match.params.type} />
-					{/*{
-						this.state.isLoading ?
-							<FontAwesomeIcon icon="spinner" spin /> :
-							<PeopleItemsComponent />
-					}*/}
+					<UsersComponent type={this.props.match.params.type} page={this.state.page} />
 				</div>
-				<Pagination page={this.state.page}/>
+				<PaginationComponent handleClick={this.handleClick} />
 			</div>
 		)
 	}

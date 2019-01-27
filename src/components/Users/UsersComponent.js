@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+
 import UsersContainer from "./UsersContainer";
+
+library.add(faSpinner);
+
 
 class UsersComponent extends Component {
 	
-	constructor(props) {
+	constructor() {
 		super();
 		
 		this.state = {
 			peoples: [],
-			gender: '',
 		};
 	}
 	
@@ -17,9 +23,10 @@ class UsersComponent extends Component {
 	}
 	
 	componentDidUpdate(prevProps) {
-		if(prevProps.type !== this.props.type) {
-			this.fetchData(this.props.type);
+		if(prevProps.type !== this.props.type || prevProps.page !== this.props.page) {
+			this.fetchData(this.props.type, this.props.page);
 		}
+		
 	}
 	
 	fetchData(gender = '', page = 0) {
@@ -35,11 +42,14 @@ class UsersComponent extends Component {
 	
 	render() {
 		return(
-			this.state.peoples.map(function(item, key) {
-				return (
-					<UsersContainer item={item} key={key} id={key}/>
-				)
-			})
+			this.state.peoples.length > 0 ?
+				this.state.peoples.map(function(item, key) {
+					return (
+						<UsersContainer item={item} key={key} id={key}/>
+					)
+				})
+				:
+				<FontAwesomeIcon icon="spinner" spin />
 		)
 	}
 }
