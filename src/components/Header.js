@@ -7,13 +7,13 @@ class Header extends Component {
 			<div className={"row header-row margin-left-off margin-right-off"}>
 				<div className={"menu"}>
 					<div className={"menu-items"}>
-						<Link to={`/man`}>Man</Link>
+						<Link to={`/`}>Random</Link>
+					</div>
+					<div className={"menu-items"}>
+						<Link to={`/male`}>Male</Link>
 					</div>
 					<div className={"menu-items"}>
 						<Link to={`/female`}>Female</Link>
-					</div>
-					<div className={"menu-items"}>
-						<Link to={`/`}>Random</Link>
 					</div>
 				</div>
 			</div>
