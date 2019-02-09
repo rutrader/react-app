@@ -10,8 +10,6 @@ class Main extends Component {
 		super();
 		
 		this.state = {
-			isLoading: true,
-			peoples: [],
 			page: 1,
 		};
 		

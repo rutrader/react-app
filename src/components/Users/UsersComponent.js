@@ -15,6 +15,7 @@ class UsersComponent extends Component {
 		
 		this.state = {
 			peoples: [],
+			isLoading: true,
 		};
 	}
 	
@@ -30,19 +31,26 @@ class UsersComponent extends Component {
 	}
 	
 	fetchData(gender = '', page = 0) {
+		this.setState({
+			isLoading: true
+		});
+		
 		const genderParam = gender.length > 0 ? '&gender='+gender : '',
 				pageParam = page > 0 ? '&page='+page : '';
 		
 		fetch('https://randomuser.me/api/?results=10'+genderParam+pageParam)
 			.then(response => response.json())
 			.then(data => {
-				this.setState({peoples: data.results});
+				this.setState({
+					peoples: data.results,
+					isLoading: false
+				});
 			});
 	}
 	
 	render() {
 		return(
-			this.state.peoples.length > 0 ?
+			!this.state.isLoading ?
 				this.state.peoples.map(function(item, key) {
 					return (
 						<UsersContainer item={item} key={key} id={key}/>
