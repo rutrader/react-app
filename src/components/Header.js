@@ -1,22 +1,53 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { Menu } from 'semantic-ui-react';
+import logo from '../logo.svg'
 
 class Header extends Component {
+
+	constructor() {
+		super();
+
+		this.state = {}
+
+		this.handleItemClick = this.handleItemClick.bind(this)
+	}
+
+	handleItemClick(event, { name }) {
+		this.setState({
+			activeItem: name
+		})
+	}
+
 	render() {
+		const { activeItem } = this.state;
+
 		return(
-			<div className={"row header-row margin-left-off margin-right-off"}>
-				<div className={"menu"}>
-					<div className={"menu-items"}>
-						<Link to={`/`}>Random</Link>
-					</div>
-					<div className={"menu-items"}>
-						<Link to={`/male`}>Male</Link>
-					</div>
-					<div className={"menu-items"}>
-						<Link to={`/female`}>Female</Link>
-					</div>
-				</div>
-			</div>
+			<Menu stackable>
+				<Menu.Item
+					href="/"
+					name="home"
+					onClick={this.handleItemClick}
+					active={activeItem === "home"}
+				>
+					<img src={logo} alt="Logo" />
+				</Menu.Item>
+				<Menu.Item
+					name="male"
+					active={activeItem === "male"}
+					onClick={this.handleItemClick}
+					href="/by/male">
+					Male
+				</Menu.Item>
+				<Menu.Item
+					name="female"
+					active={activeItem === "female"}
+					onClick={this.handleItemClick}
+					href="/by/female"
+				>
+					Female
+				</Menu.Item>
+			</Menu>
 		)
 	}
 }

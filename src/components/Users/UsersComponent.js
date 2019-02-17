@@ -20,7 +20,7 @@ class UsersComponent extends Component {
 	}
 	
 	componentDidMount() {
-		this.fetchData();
+		this.fetchData(this.props.match ? this.props.match.params.type : '');
 	}
 	
 	componentDidUpdate(prevProps) {
@@ -50,14 +50,17 @@ class UsersComponent extends Component {
 	
 	render() {
 		return(
-			!this.state.isLoading ?
-				this.state.peoples.map(function(item, key) {
-					return (
-						<UsersContainer item={item} key={key} id={key}/>
-					)
-				})
-				:
-				<FontAwesomeIcon icon="spinner" spin />
+			<div className={"margin-top-20 margin-bottom-20"}>
+				<div className={"people-items margin-top-20 margin-bottom-20"}></div>
+				{	!this.state.isLoading ?
+						this.state.peoples.map(function(item, key) {
+							return (
+								<UsersContainer item={item} key={key} id={key}/>
+							)
+						})
+						:
+						<FontAwesomeIcon icon="spinner" spin />}
+			</div>
 		)
 	}
 }
