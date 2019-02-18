@@ -5,7 +5,7 @@ function UsersContainer(props) {
 	return(
 			<div key={props.id} className={"people-item card border-off"}>
 				<div className={"avatar card-img-top"}>
-					<Link to={'/users/'+props.id}>
+					<Link to={'/users/'+(props.id+1)}>
 						<img alt={props.item.username} src={props.item.picture.large}/>
 					</Link>
 				</div>

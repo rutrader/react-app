@@ -55,7 +55,6 @@
     "@babel/register": "^7.0.0",
     "@babel/runtime": "^7.2.0",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^24.1.0",
     "bootstrap": "^4.3.1",
     "clean-webpack-plugin": "^1.0.0",
     "eslint-config-airbnb": "^17.1.0",

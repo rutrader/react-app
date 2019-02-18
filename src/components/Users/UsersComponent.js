@@ -50,8 +50,7 @@ class UsersComponent extends Component {
 	
 	render() {
 		return(
-			<div className={"margin-top-20 margin-bottom-20"}>
-				<div className={"people-items margin-top-20 margin-bottom-20"}></div>
+			<div className={"people-items margin-top-20 margin-bottom-20"}>
 				{	!this.state.isLoading ?
 						this.state.peoples.map(function(item, key) {
 							return (
