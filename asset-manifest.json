@@ -1,15 +1,16 @@
 {
-  "main.css": "/react-app/static/css/main.bd8b7ef6.chunk.css",
-  "main.js": "/react-app/static/js/main.41b3418b.chunk.js",
-  "main.js.map": "/react-app/static/js/main.41b3418b.chunk.js.map",
-  "static/css/1.27e66f7f.chunk.css": "/react-app/static/css/1.27e66f7f.chunk.css",
-  "static/js/1.aa9f601c.chunk.js": "/react-app/static/js/1.aa9f601c.chunk.js",
-  "static/js/1.aa9f601c.chunk.js.map": "/react-app/static/js/1.aa9f601c.chunk.js.map",
-  "runtime~main.js": "/react-app/static/js/runtime~main.ec461257.js",
-  "runtime~main.js.map": "/react-app/static/js/runtime~main.ec461257.js.map",
-  "static/css/1.27e66f7f.chunk.css.map": "/react-app/static/css/1.27e66f7f.chunk.css.map",
-  "static/css/main.bd8b7ef6.chunk.css.map": "/react-app/static/css/main.bd8b7ef6.chunk.css.map",
+  "main.css": "/react-app/static/css/main.39c8b16a.chunk.css",
+  "main.js": "/react-app/static/js/main.b7b6c906.chunk.js",
+  "main.js.map": "/react-app/static/js/main.b7b6c906.chunk.js.map",
+  "runtime~main.js": "/react-app/static/js/runtime~main.8ce05037.js",
+  "runtime~main.js.map": "/react-app/static/js/runtime~main.8ce05037.js.map",
+  "static/css/2.ac3ba51b.chunk.css": "/react-app/static/css/2.ac3ba51b.chunk.css",
+  "static/js/2.4f3fe956.chunk.js": "/react-app/static/js/2.4f3fe956.chunk.js",
+  "static/js/2.4f3fe956.chunk.js.map": "/react-app/static/js/2.4f3fe956.chunk.js.map",
   "index.html": "/react-app/index.html",
-  "precache-manifest.a8dca2a0b1ff6d7d056f7ce165f67da6.js": "/react-app/precache-manifest.a8dca2a0b1ff6d7d056f7ce165f67da6.js",
-  "service-worker.js": "/react-app/service-worker.js"
+  "precache-manifest.2dc4148944271d7672cbc6579309066b.js": "/react-app/precache-manifest.2dc4148944271d7672cbc6579309066b.js",
+  "service-worker.js": "/react-app/service-worker.js",
+  "static/css/2.ac3ba51b.chunk.css.map": "/react-app/static/css/2.ac3ba51b.chunk.css.map",
+  "static/css/main.39c8b16a.chunk.css.map": "/react-app/static/css/main.39c8b16a.chunk.css.map",
+  "static/media/logo.svg": "/react-app/static/media/logo.84287d09.svg"
 }
