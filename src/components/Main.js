@@ -10,7 +10,7 @@ class Main extends Component {
 		return(
 			<div>
 				<Switch>
-					<Route exact path="/" component={Home} />
+					<Route exact path="/:page?" component={Home} />
 					<Route path="/by/:type" component={Users} />
 					<Route path="/users/:id" component={InfoMain} />
 				</Switch>

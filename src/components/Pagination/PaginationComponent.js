@@ -25,7 +25,7 @@ class PaginationComponent extends Component {
 				<div className={"page-item pages"}>
 						{this.state.pages.map(function(item, key) {
 							return (
-								<PaginationContainer onClick={this.onClick} item={item} key={key} id={key}/>
+								<PaginationContainer page={this.props.page} type={this.props.type} onClick={this.onClick} item={item} key={key} id={key}/>
 							)
 						}, this)}
 					

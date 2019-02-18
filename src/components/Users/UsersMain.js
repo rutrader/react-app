@@ -6,10 +6,13 @@ import Users from './UsersComponent'
 class UsersMain extends Component {
 
     render() {
+        
         return(
-            <Switch>
-                <Route path="/by/:type" component={Users} />
-            </Switch>
+            <div>
+                <Switch>
+                    <Route path="/by/:type/:page?" component={Users} />
+                </Switch>
+            </div>
         )
     }
 }

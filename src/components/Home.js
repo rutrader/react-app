@@ -1,7 +1,5 @@
 import React, {Component} from 'react'
 import UsersComponent from "./Users/UsersComponent";
-import PaginationComponent from "./Pagination/PaginationComponent";
-
 
 class Home extends Component {
     constructor() {
@@ -21,8 +19,7 @@ class Home extends Component {
 	
 	render() {
 		return(
-				<UsersComponent type={this.props.match.params.type} page={this.state.page} />
-				// <PaginationComponent handleClick={this.handleClick} />
+			<UsersComponent pagination={false} type={this.props.match.params.type} page={this.state.page} />
 		)
 	}
 }

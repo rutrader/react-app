@@ -1,10 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function PaginationContainer(props) {
+	let prefix = props.type ? '/by/'+props.type + '/' : '/';
+	
 	return(
-		<a href={'#'+props.item} key={props.id} onClick={props.onClick}>
+		<Link to={prefix + props.item}>
 			{props.item}
-		</a>
+		</Link>
 	)
 }
 
